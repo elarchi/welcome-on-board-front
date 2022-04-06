@@ -1,0 +1,80 @@
+$dark-sailor: #000;
+$foam: #fff;
+$lightGrey: #8b8888;
+
+.signup__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 900px;
+  background-image: url(https://res.cloudinary.com/dn7zdnm89/image/upload/v1649187787/Welcome%20on%20Board/waves_vapxwy.png);
+  background-size: cover;
+  background-position: bottom;
+  border: green solid 3px;
+  .form__form {
+    margin-top: 2rem;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+    justify-content: space-between;
+
+    .titles__div {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    .fields__div {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      input {
+        border: none;
+        border-bottom: $dark-sailor 3px solid;
+        height: 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      ::placeholder {
+        color: $dark-sailor;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+    .submit__div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      button {
+        width: 100%;
+        border: none;
+        background-color: $dark-sailor;
+        color: $foam;
+        height: 60px;
+        font-size: 1rem;
+        &:hover {
+          cursor: pointer;
+          transition: background-color 0.3s;
+          background-color: $foam;
+          color: $dark-sailor;
+          border: $dark-sailor solid 2px;
+        }
+      }
+      p {
+        color: $lightGrey;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
