@@ -1,0 +1,62 @@
+$dark-sailor: #000;
+$foam: #fff;
+
+.home__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 900px;
+  background-image: url(https://res.cloudinary.com/dn7zdnm89/image/upload/v1649187787/Welcome%20on%20Board/waves_vapxwy.png);
+  background-size: cover;
+  background-position: bottom;
+
+  .black-rectangle__div {
+    width: 635px;
+    height: 260px;
+    background-color: $dark-sailor;
+    color: $foam;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    .rectangle-with-white-borders__div {
+      border: $foam solid 1px;
+      width: 600px;
+      height: 225px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      flex-direction: column;
+      h1 {
+        font-size: 6rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+  .nav__div {
+    display: flex;
+    width: 635px;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    button {
+      width: 300px;
+      height: 60px;
+      border: $dark-sailor solid 1px;
+      background-color: $foam;
+      font-weight: bold;
+      font-size: 1.2rem;
+      &:hover {
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: $dark-sailor;
+        color: $foam;
+      }
+    }
+  }
+  .signature__div {
+    margin-top: 2rem;
+  }
+}
