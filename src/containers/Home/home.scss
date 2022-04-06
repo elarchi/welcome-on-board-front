@@ -1,5 +1,6 @@
 $dark-sailor: #000;
 $foam: #fff;
+$corail: #fa633a;
 
 .home__div {
   display: flex;
@@ -8,7 +9,7 @@ $foam: #fff;
   height: 900px;
   background-image: url(https://res.cloudinary.com/dn7zdnm89/image/upload/v1649187787/Welcome%20on%20Board/waves_vapxwy.png);
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom left;
 
   .black-rectangle__div {
     width: 635px;
@@ -38,11 +39,20 @@ $foam: #fff;
   }
   .nav__div {
     display: flex;
-    width: 635px;
-    justify-content: space-between;
-    margin-top: 2.5rem;
+    flex-direction: column;
+
+    .community__div {
+      display: flex;
+      width: 635px;
+      justify-content: space-between;
+      margin-top: 2.5rem;
+      button {
+        width: 300px;
+      }
+    }
+
     button {
-      width: 300px;
+      width: 635px;
       height: 60px;
       border: $dark-sailor solid 1px;
       background-color: $foam;
@@ -57,6 +67,9 @@ $foam: #fff;
     }
   }
   .signature__div {
-    margin-top: 2rem;
+    margin-top: 20rem;
+    font-weight: bold;
+    color: $dark-sailor;
+    background-color: $corail;
   }
 }
