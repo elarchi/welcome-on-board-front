@@ -1,3 +1,6 @@
+//packages
+import { Link } from "react-router-dom";
+//style
 import "./home.scss";
 
 const Home = () => {
@@ -9,7 +12,10 @@ const Home = () => {
         </div>
       </div>
       <div className="nav__div">
-        <button>SIGNUP</button>
+        <Link to="/signup">
+          <button>SIGNUP</button>
+        </Link>
+
         <button>LOGIN</button>
       </div>
       <div className="signature__div">
