@@ -1,6 +1,7 @@
 $dark-sailor: #000;
 $foam: #fff;
 $lightGrey: #8b8888;
+$error: red;
 
 .signup__div {
   display: flex;
@@ -10,14 +11,14 @@ $lightGrey: #8b8888;
   background-image: url(https://res.cloudinary.com/dn7zdnm89/image/upload/v1649187787/Welcome%20on%20Board/waves_vapxwy.png);
   background-size: cover;
   background-position: bottom;
-  border: green solid 3px;
   .form__form {
     margin-top: 2rem;
     width: 600px;
     display: flex;
     flex-direction: column;
-    height: 580px;
+    height: 590px;
     justify-content: space-between;
+    gap: 20px;
 
     .titles__div {
       display: flex;
@@ -35,6 +36,13 @@ $lightGrey: #8b8888;
       display: flex;
       flex-direction: column;
       gap: 30px;
+
+      .field__div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
       input {
         border: none;
         border-bottom: $dark-sailor 3px solid;
@@ -46,6 +54,9 @@ $lightGrey: #8b8888;
         color: $dark-sailor;
         font-size: 1rem;
         font-weight: bold;
+      }
+      p {
+        color: $error;
       }
     }
     .submit__div {
