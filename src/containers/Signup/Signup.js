@@ -4,7 +4,9 @@ import { useState } from "react";
 //style
 import "./signup.scss";
 
-const Signup = () => {
+const Signup = ({ setHeaderState }) => {
+  setHeaderState(1);
+
   const [username, setUsername] = useState("");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
