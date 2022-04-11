@@ -1,71 +1,66 @@
-# Getting Started with Create React App
+# ⚓️ Welcome on bord!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome on bord is an app created, developed and designed by Emilie Leury.
 
-## Available Scripts
+This app serves as a planner and organiser to plan your trips.
 
-In the project directory, you can run:
+<img width="658" alt="Screenshot 2022-04-11 at 18 05 32" src="https://user-images.githubusercontent.com/96998011/162792901-70e49c31-5c4d-411a-80d9-922f5fc2006c.png">
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Summary
+ ### 1. What this app does
+   ### 2. Graphic chart 
+   ### 3. Deployment
+   ### 4. Backend link
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ## 🧐 What this app does
+ The project is built following some steps: 
+ 
+ (for now, only the first one is active)
 
-### `yarn build`
+ ### 1. To-do list board
+ 
+ The first tool of this app is a to-do list.
+You can create different lists, and add differents tasks in each.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As a guest, you can use the to-do list for 3 days.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can also create your own account to use it without time limitation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1017" alt="Screenshot 2022-04-11 at 18 04 23" src="https://user-images.githubusercontent.com/96998011/162792737-ab4b141e-a1a3-407e-8830-03015c2166c5.png">
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ ### 2. Destination generator
+ 
+ Need some inspiration to pack up and travel? Use the destination generator.
+ Just answer a few questions to configurate the tool to get to know you better, and wait for suggestions.
+ 
+ ### 3. Currency converser
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ### 4. Map of your journey
+ You can pin your different destinations to visualise your travels.
+ 
+ ### 5. Destination wiki
+ Want to learn more about your next destination ? Use our wiki.
+ 
+ ### 6. Goodies market
+This app sells mugs and t-shirts.
+ 
+ ## 🎨 Graphic chart 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+corail: #FA633A
 
-## Learn More
+blackSailor: #000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+whiteFoam: #FFF
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deployment
 
-### Code Splitting
+Netlify: 
+https://welcome-on-board-by-elarchi.netlify.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Backend link
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# welcome-on-board-front
