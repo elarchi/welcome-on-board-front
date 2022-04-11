@@ -9,13 +9,14 @@ This app serves as a planner and organiser to plan your trips.
 
 
 ## Summary
- ### 1. What this app does
-   ### 2. Graphic chart 
-   ### 3. Deployment
-   ### 4. Backend link
+ ### 🧐 What this app does
+ ### 👩🏾‍💻 Tech 
+ ### 🎨 Design 
+  
+ 
 
 
- ## 🧐 What this app does
+ ## 🧐 What this app does?
  The project is built following some steps: 
  
  (for now, only the first one is active)
@@ -49,18 +50,36 @@ You can also create your own account to use it without time limitation.
  ### 6. Goodies market
 This app sells mugs and t-shirts.
  
- ## 🎨 Graphic chart 
+ ## 👩🏾‍💻 Tech
+ ### 1. Stack
 
+Javascript
+
+React — SCSS 
+
+Cloudinary 
+
+### 2. Deployment
+
+Netlify: 
+https://welcome-on-board-by-elarchi.netlify.app/
+
+### 3.Backend link
+
+ ## 🎨 Design 
+ ### 1. Figma link
+
+The UI and UX was thinking by Emilie Leury.
+
+https://www.figma.com/file/iGuqTgzYhnRqG0dboFbpUa/Welcome-on-board---web?node-id=0%3A1
+
+### 2. Graphic chart
 corail: #FA633A
 
 blackSailor: #000
 
 whiteFoam: #FFF
 
-## 🚀 Deployment
 
-Netlify: 
-https://welcome-on-board-by-elarchi.netlify.app/
 
-## Backend link
 
