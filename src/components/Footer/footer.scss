@@ -1,0 +1,28 @@
+$foam: #fff;
+$corail: #fa633a;
+$dark-sailor: #000;
+
+.footer__div {
+  background-color: $corail;
+  height: 2rem;
+  width: 100%;
+  color: $foam;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 12px;
+    span {
+      text-decoration: underline;
+
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: $dark-sailor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

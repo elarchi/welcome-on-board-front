@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //components
 import Header from "./components/Header/Header";
-import Home from "./containers/Home/Home";
+import Opening from "./containers/Opening/Opening";
 import Signup from "./containers/Signup/Signup";
 import Footer from "./components/Footer/Footer";
 //style
@@ -20,7 +20,7 @@ function App() {
     <Router>
       <Header headerState={headerState} />
       <Routes>
-        <Route path="/" element={<Home setHeaderState={setHeaderState} />} />
+        <Route path="/" element={<Opening setHeaderState={setHeaderState} />} />
         <Route
           path="/signup"
           element={<Signup setHeaderState={setHeaderState} />}
