@@ -1,7 +1,8 @@
 //style
 import "./todolist.scss";
 
-const ToDoList = () => {
+const ToDoList = ({ setHeaderState }) => {
+  setHeaderState(2);
   return <div className="todolist__div">ToDoList Component</div>;
 };
 

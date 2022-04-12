@@ -1,7 +1,42 @@
+$corail: #fa633a;
 $dark-sailor: #000;
 $foam: #fff;
 
 .header__div {
-  height: 75px;
-  background-color: $dark-sailor;
+  height: 50px;
+  background-color: $corail;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 24px;
+    color: $foam;
+  }
+
+  .items__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav__div {
+      display: flex;
+      width: 220px;
+      justify-content: space-between;
+
+      button {
+        color: $foam;
+        background-color: $corail;
+        border: solid 1px $foam;
+        width: 100px;
+        height: 24px;
+        &:hover {
+          cursor: pointer;
+          color: $dark-sailor;
+          background-color: $foam;
+          border: solid 1px $dark-sailor;
+          transition: background-color 0.3s;
+        }
+      }
+    }
+  }
 }
