@@ -1,5 +1,5 @@
 //packages
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 //style
 import "./opening.scss";
 
@@ -21,7 +21,9 @@ const Opening = ({ setHeaderState }) => {
 
           <button>LOGIN</button>
         </div>
-        <button>LET'S START AS A GUEST</button>
+        <Link to="/todolist">
+          <button>LET'S START AS A GUEST</button>
+        </Link>
       </div>
     </div>
   );
