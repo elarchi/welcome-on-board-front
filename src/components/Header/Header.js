@@ -1,3 +1,4 @@
+//style
 import "./header.scss";
 
 const Header = ({ headerState }) => {
