@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./containers/Home/Home";
 import Signup from "./containers/Signup/Signup";
+import Footer from "./components/Footer/Footer";
 //style
 import "./App.scss";
 
@@ -25,6 +26,7 @@ function App() {
           element={<Signup setHeaderState={setHeaderState} />}
         />
       </Routes>
+      <Footer />
     </Router>
   );
 }
