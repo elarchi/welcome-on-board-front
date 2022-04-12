@@ -1,5 +1,5 @@
 //packages
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 //style
 import "./opening.scss";
 
@@ -15,9 +15,9 @@ const Opening = ({ setHeaderState }) => {
       </div>
       <div className="nav__div">
         <div className="community__div">
-          <Link to="/signup">
-            <button>SIGNUP</button>
-          </Link>
+          {/* <Link to="/signup"> */}
+          <button>SIGNUP</button>
+          {/* </Link> */}
 
           <button>LOGIN</button>
         </div>
