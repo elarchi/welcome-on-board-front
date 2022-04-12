@@ -3,13 +3,20 @@ $foam: #fff;
 $corail: #fa633a;
 
 .todolist__div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url(https://res.cloudinary.com/dn7zdnm89/image/upload/v1649187787/Welcome%20on%20Board/waves_vapxwy.png);
   background-size: cover;
   background-position: bottom left;
   margin: 0;
   min-height: 92vh;
   grid-template-rows: auto 1fr auto;
+
+  .headband__div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: red solid 3px;
+    h1 {
+      font-size: 96px;
+    }
+  }
 }
