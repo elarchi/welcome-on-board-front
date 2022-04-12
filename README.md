@@ -53,11 +53,18 @@ This app sells mugs and t-shirts.
  ## 👩🏾‍💻 Tech
  ### 1. Stack
 
-Javascript
+[<img width="45px" style="margin-right: 10px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>](https://fr.reactjs.org/)&emsp;
+[<img width="45px" style="margin-right: 10px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/>](https://sass-lang.com/)&emsp;
+[<img width="45px" style="margin-right: 10px" src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1649711492/Stack/Javascript_Logo_u2qgnb.png"/>](https://www.javascript.com)&emsp;
+<img width="45px" style="margin-right: 10px" src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1649711643/Stack/html-1_rkqezf.svg"/>&emsp;
+<img width="45px" style="margin-right: 10px" src="https://res.cloudinary.com/dn7zdnm89/image/upload/v1649711787/Stack/CSS3_logo.svg_xrgnjc.png"/>&emsp;
 
-React — SCSS 
+#### Packages:
+```jsx
+yarn add react-router-dom sass
+```
 
-Cloudinary 
+
 
 ### 2. Deployment
 
