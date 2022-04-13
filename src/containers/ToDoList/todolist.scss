@@ -1,0 +1,69 @@
+$dark-sailor: #000;
+$foam: #fff;
+$corail: #fa633a;
+
+.todolist__div {
+  background-image: url(https://res.cloudinary.com/dn7zdnm89/image/upload/v1649187787/Welcome%20on%20Board/waves_vapxwy.png);
+  background-size: cover;
+  background-position: bottom left;
+  margin: 0;
+  min-height: 92vh;
+  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .headband__div {
+    width: 100%;
+    // border: solid 3px red;
+    display: flex;
+    justify-content: space-between;
+    height: 114px;
+    align-items: flex-end;
+    margin-top: 1rem;
+
+    h1 {
+      font-size: 96px;
+      font-weight: bold;
+    }
+    button {
+      background-color: $foam;
+      color: $corail;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid $corail 1px;
+      height: 55px;
+      width: 250px;
+
+      &:hover {
+        cursor: pointer;
+        color: $foam;
+        background-color: $corail;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .list-section__div {
+    border: red solid 3px;
+    width: 100%;
+  }
+
+  .list-modal-enable__div {
+    background-color: $dark-sailor;
+    color: $foam;
+  }
+
+  .list-modal-disable__div {
+    display: none;
+  }
+
+  .task-modal-enable__div {
+  }
+
+  .task-modal-disable__div {
+    display: none;
+  }
+}

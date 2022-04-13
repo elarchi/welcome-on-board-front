@@ -1,19 +1,18 @@
-// yarn add react-router-dom sass
-
 //packages
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//components
-import Header from "./components/Header/Header";
-import Opening from "./containers/Opening/Opening";
-import Signup from "./containers/Signup/Signup";
-import Footer from "./components/Footer/Footer";
 //style
 import "./App.scss";
+//components
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Opening from "./containers/Opening/Opening";
+import Signup from "./containers/Signup/Signup";
+import ToDoList from "./containers/ToDoList/ToDoList";
 
 function App() {
   const [headerState, setHeaderState] = useState(0);
-  //0: Home page
+  //0: Opening page
   //1: Signup page
 
   return (
@@ -24,6 +23,10 @@ function App() {
         <Route
           path="/signup"
           element={<Signup setHeaderState={setHeaderState} />}
+        />
+        <Route
+          path="/todolist"
+          element={<ToDoList setHeaderState={setHeaderState} />}
         />
       </Routes>
       <Footer />
