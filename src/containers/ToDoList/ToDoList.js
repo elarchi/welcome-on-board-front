@@ -114,7 +114,9 @@ const ToDoList = ({ setHeaderState }) => {
         }
       >
         <div className="quit__div">
-          <button onClick={closeListModal}>X</button>
+          <button type="button" onClick={closeListModal}>
+            X
+          </button>
         </div>
         <div className="title__div">
           <h1>LIST OPTIONS</h1>
@@ -141,7 +143,9 @@ const ToDoList = ({ setHeaderState }) => {
             />
           </div>
           <div className="buttons__div">
-            <button onClick={closeListModal}>CANCEL</button>
+            <button type="button" onClick={closeListModal}>
+              CANCEL
+            </button>
             <button type="submit">CREATE LIST</button>
           </div>
         </form>
@@ -153,7 +157,9 @@ const ToDoList = ({ setHeaderState }) => {
         }
       >
         <div className="quit__div">
-          <button onClick={closeTaskModal}>X</button>
+          <button type="button" onClick={closeTaskModal}>
+            X
+          </button>
         </div>
         <div className="title__div">
           <h1>TASK OPTIONS</h1>
@@ -203,8 +209,12 @@ const ToDoList = ({ setHeaderState }) => {
             />
           </div>
           <div className="buttons__div">
-            <button onClick={closeTaskModal}>CANCEL</button>
-            <button type="submit">CREATE TASK</button>
+            <button type="button" onClick={closeTaskModal}>
+              CANCEL
+            </button>
+            <button type="submit" disabled={!taskTitle}>
+              CREATE TASK
+            </button>
           </div>
         </form>
       </div>
