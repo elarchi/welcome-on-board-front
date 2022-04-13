@@ -9,12 +9,11 @@ $corail: #fa633a;
   margin: 0;
   min-height: 92vh;
   grid-template-rows: auto 1fr auto;
+  display: flex;
+  justify-content: center;
 
   .headband__div {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    border: red solid 3px;
     h1 {
       font-size: 96px;
     }
