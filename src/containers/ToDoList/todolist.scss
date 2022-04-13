@@ -14,8 +14,33 @@ $corail: #fa633a;
 
   .headband__div {
     width: 100%;
+    // border: solid 3px red;
+    display: flex;
+    justify-content: space-between;
+    height: 114px;
+    align-items: flex-end;
+    margin-top: 1rem;
+
     h1 {
       font-size: 96px;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: $foam;
+      color: $corail;
+      font-weight: bold;
+      font-size: 20px;
+      border: solid $corail 1px;
+      height: 55px;
+      width: 250px;
+      box-shadow: -2px 4px 10px rgb(154, 153, 153);
+      &:hover {
+        cursor: pointer;
+        color: $foam;
+        background-color: $corail;
+        transition: background-color 0.3s;
+      }
     }
   }
 }
