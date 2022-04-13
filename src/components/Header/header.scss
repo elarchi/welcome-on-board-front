@@ -36,7 +36,9 @@ $foam: #fff;
           color: $dark-sailor;
           background-color: $foam;
           border: solid 1px $dark-sailor;
-          transition: background-color 0.3s;
+          transition: 0.3s;
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+            0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
       }
     }

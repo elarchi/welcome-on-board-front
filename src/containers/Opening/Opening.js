@@ -22,7 +22,7 @@ const Opening = ({ setHeaderState }) => {
           <button>LOGIN</button>
         </div>
         <Link to="/todolist">
-          <button>LET'S START AS A GUEST</button>
+          <button>START AS A GUEST</button>
         </Link>
       </div>
     </div>

@@ -1,3 +1,5 @@
+//packages
+import { Link } from "react-router-dom";
 //style
 import "./header.scss";
 
@@ -11,7 +13,10 @@ const Header = ({ headerState }) => {
       {headerState === 0 ? null : headerState === 1 ? null : (
         <div className="header__div">
           <div className="container__div items__div">
-            <h1>⚓️ Welcome on Board</h1>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <h1>⚓️ Welcome on Board</h1>
+            </Link>
+
             <div className="nav__div">
               <button>SIGN UP</button>
               <button>LOGIN</button>
