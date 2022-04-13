@@ -37,7 +37,7 @@ const ToDoList = ({ setHeaderState }) => {
   const [taskTitle, setTaskTitle] = useState("");
   const [isImportant, setIsImportant] = useState(false);
   const [taskDescription, setTaskDescription] = useState("");
-  const [isDone, setIsDone] = useState(false);
+  // const [isDone, setIsDone] = useState(false);
   const closeTaskModal = () => {
     setTaskTitle("");
     setTaskDescription("");
@@ -51,7 +51,7 @@ const ToDoList = ({ setHeaderState }) => {
       title: taskTitle,
       isImportant: isImportant,
       description: taskDescription,
-      isDone: isDone,
+      // isDone: isDone,
     });
     setTaskTab(newTaskTab);
     setTaskTitle("");
@@ -61,7 +61,7 @@ const ToDoList = ({ setHeaderState }) => {
   };
 
   //counter
-  const [tasksDone, setTasksDone] = useState(0); // combien de task à true ?
+  // const [tasksDone, setTasksDone] = useState(0); // combien de task à true ?
   const totalTasks = taskTab.length;
 
   return (
