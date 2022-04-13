@@ -37,6 +37,7 @@ const ToDoList = ({ setHeaderState }) => {
   const [taskTitle, setTaskTitle] = useState("");
   const [isImportant, setIsImportant] = useState(false);
   const [taskDescription, setTaskDescription] = useState("");
+  const [isDone, setIsDone] = useState(false);
   const closeTaskModal = () => {
     setTaskTitle("");
     setTaskDescription("");
@@ -50,6 +51,7 @@ const ToDoList = ({ setHeaderState }) => {
       title: taskTitle,
       isImportant: isImportant,
       description: taskDescription,
+      isDone: isDone,
     });
     setTaskTab(newTaskTab);
     setTaskTitle("");
@@ -57,6 +59,10 @@ const ToDoList = ({ setHeaderState }) => {
     setIsImportant(false);
     setTaskModal(false);
   };
+
+  //counter
+  const [tasksDone, setTasksDone] = useState(0); // combien de task à true ?
+  const totalTasks = taskTab.length;
 
   return (
     <div className="todolist__div">
@@ -77,7 +83,7 @@ const ToDoList = ({ setHeaderState }) => {
             <div className="listCard__div" key={index}>
               <div className="listHead__div">
                 <h2>{list.title}</h2>
-                <span>counter</span>
+                <span>/{totalTasks}</span>
               </div>
               <div className="listBody__div">
                 {taskTab.map((task, index) => {
@@ -87,7 +93,7 @@ const ToDoList = ({ setHeaderState }) => {
                       <div className="cardOptions__div">
                         <span>🖊</span>
                         <span>🗑</span>
-                        <span>✅</span>
+                        {/* <span onClick={() => {}}>✅</span> */}
                       </div>
                     </div>
                   );
@@ -146,7 +152,9 @@ const ToDoList = ({ setHeaderState }) => {
             <button type="button" onClick={closeListModal}>
               CANCEL
             </button>
-            <button type="submit">CREATE LIST</button>
+            <button type="submit" disabled={!listTitle}>
+              CREATE LIST
+            </button>
           </div>
         </form>
       </div>
