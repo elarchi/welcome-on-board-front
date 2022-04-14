@@ -14,7 +14,7 @@ const TodolistPage = ({ setHeaderState }) => {
   const [itemDescription, setItemDescription] = useState("");
   const [listTab, setListTab] = useState([]);
   const [taskTab, setTaskTab] = useState([]);
-  /*const [isImportant, setIsImportant] = useState(false);*/
+  const [isImportant, setIsImportant] = useState(false);
   /*const [isDone, setIsDone] = useState(false);*/
   /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
   const totalTasks = taskTab.length;
@@ -25,14 +25,14 @@ const TodolistPage = ({ setHeaderState }) => {
 
   const handleClickAddList = (event) => {
     event.preventDefault();
-    setOpenModal(true);
     setWhichItem("list");
+    setOpenModal(true);
   };
 
   const handleClickAddTask = (event) => {
     event.preventDefault();
-    setOpenModal(true);
     setWhichItem("task");
+    setOpenModal(true);
   };
 
   const handleCreateItem = (event) => {
@@ -107,6 +107,7 @@ const TodolistPage = ({ setHeaderState }) => {
         setItemTitle={setItemTitle}
         itemDescription={setItemDescription}
         setItemDescription={setItemDescription}
+        setIsImportant={setIsImportant}
       />
     </div>
   );
