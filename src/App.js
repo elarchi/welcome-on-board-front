@@ -11,9 +11,11 @@ import Signup from "./containers/Signup/Signup";
 import Todolist from "./containers/Todolist/Todolist";
 
 function App() {
+  //__________header operation__________
   const [headerState, setHeaderState] = useState(0);
-  //0: Opening page
-  //1: Signup page
+  /*Different options:
+  0: Opening page 
+  1: Signup page*/
 
   return (
     <Router>
