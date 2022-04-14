@@ -1,6 +1,6 @@
 //packages
 import { useState } from "react";
-// import axios from "axios";
+/*import axios from "axios";*/
 //style
 import "./signup.scss";
 
