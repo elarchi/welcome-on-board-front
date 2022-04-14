@@ -31,6 +31,11 @@ const TodolistModal = ({
             onChange={(event) => {
               setItemTitle(event.target.value);
             }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                handleCreateItem();
+              }
+            }}
           />
         </div>
         {whichItem === "task" ? (
