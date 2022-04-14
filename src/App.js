@@ -28,7 +28,7 @@ function App() {
         />
         <Route
           path="/todolist"
-          element={<Todolist setHeaderState={setHeaderState} />}
+          element={<TodolistPage setHeaderState={setHeaderState} />}
         />
       </Routes>
       <Footer />
