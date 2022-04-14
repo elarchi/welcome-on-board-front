@@ -1,9 +1,9 @@
 //packages
 import { Link } from "react-router-dom";
 //style
-import "./opening.scss";
+import "./openingPage.scss";
 
-const Opening = ({ setHeaderState }) => {
+const OpeningPage = ({ setHeaderState }) => {
   setHeaderState(0);
 
   return (
@@ -29,4 +29,4 @@ const Opening = ({ setHeaderState }) => {
   );
 };
 
-export default Opening;
+export default OpeningPage;

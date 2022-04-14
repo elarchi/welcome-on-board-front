@@ -6,8 +6,8 @@ import "./App.scss";
 //components
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Opening from "./containers/Opening/Opening";
-import Signup from "./containers/Signup/Signup";
+import OpeningPage from "./containers/OpeningPage/OpeningPage";
+import SignupPage from "./containers/SignupPage/SignupPage";
 import TodolistPage from "./containers/TodolistPage/TodolistPage";
 
 function App() {
@@ -21,10 +21,13 @@ function App() {
     <Router>
       <Header headerState={headerState} />
       <Routes>
-        <Route path="/" element={<Opening setHeaderState={setHeaderState} />} />
+        <Route
+          path="/"
+          element={<OpeningPage setHeaderState={setHeaderState} />}
+        />
         <Route
           path="/signup"
-          element={<Signup setHeaderState={setHeaderState} />}
+          element={<SignupPage setHeaderState={setHeaderState} />}
         />
         <Route
           path="/todolist"

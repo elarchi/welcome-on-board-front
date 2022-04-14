@@ -2,7 +2,7 @@
 import { useState } from "react";
 /*import axios from "axios";*/
 //style
-import "./signup.scss";
+import "./signupPage.scss";
 
 const Signup = ({ setHeaderState }) => {
   setHeaderState(1);
