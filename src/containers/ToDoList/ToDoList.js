@@ -14,7 +14,7 @@ const Todolist = ({ setHeaderState }) => {
   const [itemDescription, setItemDescription] = useState("");
   const [listTab, setListTab] = useState([]);
   const [taskTab, setTaskTab] = useState([]);
-  const [isImportant, setIsImportant] = useState(false);
+  // const [isImportant, setIsImportant] = useState(false);
   /*const [isDone, setIsDone] = useState(false);*/
   /* const [tasksDone, setTasksDone] = useState(0); // combien de task à true ?*/
   const totalTasks = taskTab.length;
@@ -45,7 +45,7 @@ const Todolist = ({ setHeaderState }) => {
       const newTaskTab = [...taskTab];
       newTaskTab.push({
         title: itemTitle,
-        isImportant: isImportant,
+        // isImportant: isImportant,
         description: itemDescription,
         /* isDone: isDone,*/
       });
