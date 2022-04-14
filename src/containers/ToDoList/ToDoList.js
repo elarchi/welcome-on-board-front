@@ -16,7 +16,7 @@ const Todolist = ({ setHeaderState }) => {
   const [taskTab, setTaskTab] = useState([]);
   /*const [isImportant, setIsImportant] = useState(false);*/
   /*const [isDone, setIsDone] = useState(false);*/
-  /* const [tasksDone, setTasksDone] = useState(0); // combien de task à true ?*/
+  /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
   const totalTasks = taskTab.length;
 
   //__________modal operation__________

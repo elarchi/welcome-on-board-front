@@ -13,7 +13,7 @@ import Todolist from "./containers/Todolist/Todolist";
 function App() {
   //__________header operation__________
   const [headerState, setHeaderState] = useState(0);
-  /*Different options:
+  /*Options:
   0: Opening page 
   1: Signup page*/
 
