@@ -12,12 +12,54 @@ const TodolistPage = ({ setHeaderState }) => {
   //__________item operation__________
   const [itemTitle, setItemTitle] = useState("");
   const [itemDescription, setItemDescription] = useState("");
-  const [listTab, setListTab] = useState([]);
-  const [taskTab, setTaskTab] = useState([]);
-  const [isImportant, setIsImportant] = useState(false);
-  /*const [isDone, setIsDone] = useState(false);*/
+  const [listTab, setListTab] = useState([{ title: "Brasil trip" }]);
+  const [taskTab, setTaskTab] = useState([
+    { title: "Check passport's validity", isDone: false },
+    { title: "Learn brasil history", isDone: false },
+    { title: "Learn portuguese", isDone: false },
+  ]);
   /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
   const totalTasks = taskTab.length;
+
+  const handleCreateItem = (event) => {
+    event.preventDefault();
+    if (whichItem === "list") {
+      const newListTab = [...listTab];
+      newListTab.push({ title: itemTitle, description: itemDescription });
+      setListTab(newListTab);
+    } else if (whichItem === "task") {
+      const newTaskTab = [...taskTab];
+      newTaskTab.push({
+        title: itemTitle,
+        /*isImportant: false,*/
+        description: itemDescription,
+        isDone: false,
+      });
+      setTaskTab(newTaskTab);
+    }
+    setItemTitle("");
+    setItemDescription("");
+    setOpenModal(false);
+  };
+
+  const handleTaskDone = (task, index) => {
+    console.log("1");
+    console.log("task===>", task);
+    const newTaskTab = [...taskTab];
+    newTaskTab.map(() => {
+      console.log("2");
+      if (task.isDone === false) {
+        console.log("3");
+        return (newTaskTab[index].isDone = true);
+      } else {
+        console.log("4");
+        return (newTaskTab[index].isDone = false);
+      }
+    });
+
+    setTaskTab(newTaskTab);
+    console.log("5");
+  };
 
   const handleDeleteTask = (indexItem) => {
     const newTaskTab = [...taskTab];
@@ -45,27 +87,6 @@ const TodolistPage = ({ setHeaderState }) => {
     event.preventDefault();
     setWhichItem("task");
     setOpenModal(true);
-  };
-
-  const handleCreateItem = (event) => {
-    event.preventDefault();
-    if (whichItem === "list") {
-      const newListTab = [...listTab];
-      newListTab.push({ title: itemTitle, description: itemDescription });
-      setListTab(newListTab);
-    } else if (whichItem === "task") {
-      const newTaskTab = [...taskTab];
-      newTaskTab.push({
-        title: itemTitle,
-        /*isImportant: isImportant,*/
-        description: itemDescription,
-        /* isDone: isDone,*/
-      });
-      setTaskTab(newTaskTab);
-    }
-    setItemTitle("");
-    setItemDescription("");
-    setOpenModal(false);
   };
 
   const closeModal = () => {
@@ -114,7 +135,13 @@ const TodolistPage = ({ setHeaderState }) => {
                         >
                           🗑
                         </span>
-                        {/* <span onClick={() => {}}>✅</span> */}
+                        <span
+                          onClick={() => {
+                            handleTaskDone(task, index);
+                          }}
+                        >
+                          ✅
+                        </span>
                       </div>
                     </div>
                   );
@@ -122,7 +149,8 @@ const TodolistPage = ({ setHeaderState }) => {
               </div>
               <div className="listFooter__div">
                 <button onClick={handleClickAddTask}>+</button>
-                <span>Add a task</span>
+
+                <span> Add a task</span>
               </div>
             </div>
           );
@@ -137,7 +165,7 @@ const TodolistPage = ({ setHeaderState }) => {
         setItemTitle={setItemTitle}
         itemDescription={setItemDescription}
         setItemDescription={setItemDescription}
-        setIsImportant={setIsImportant}
+        // setIsImportant={setIsImportant}
       />
     </div>
   );
