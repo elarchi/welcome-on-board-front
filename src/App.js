@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Opening from "./containers/Opening/Opening";
 import Signup from "./containers/Signup/Signup";
-import ToDoList from "./containers/ToDoList/ToDoList";
+import Todolist from "./containers/Todolist/Todolist";
 
 function App() {
   const [headerState, setHeaderState] = useState(0);
@@ -26,7 +26,7 @@ function App() {
         />
         <Route
           path="/todolist"
-          element={<ToDoList setHeaderState={setHeaderState} />}
+          element={<Todolist setHeaderState={setHeaderState} />}
         />
       </Routes>
       <Footer />
