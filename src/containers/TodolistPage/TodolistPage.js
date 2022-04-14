@@ -1,12 +1,12 @@
 //__________package__________
 import { useState } from "react";
 //__________style__________
-import "./todolist.scss";
+import "./todolistPage.scss";
 //__________component__________
 import TodolistModal from "../../components/TodolistModal/TodolistModal";
 import FormattedDate from "../../components/FormattedDate/FormattedDate";
 
-const Todolist = ({ setHeaderState }) => {
+const TodolistPage = ({ setHeaderState }) => {
   setHeaderState(2);
 
   //__________item operation__________
@@ -112,7 +112,7 @@ const Todolist = ({ setHeaderState }) => {
   );
 };
 
-export default Todolist;
+export default TodolistPage;
 
 {
   /* <div

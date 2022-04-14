@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Opening from "./containers/Opening/Opening";
 import Signup from "./containers/Signup/Signup";
-import Todolist from "./containers/Todolist/Todolist";
+import TodolistPage from "./containers/TodolistPage/TodolistPage";
 
 function App() {
   //__________header operation__________
