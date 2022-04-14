@@ -8,12 +8,14 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Opening from "./containers/Opening/Opening";
 import Signup from "./containers/Signup/Signup";
-import Todolist from "./containers/Todolist/Todolist";
+import TodolistPage from "./containers/TodolistPage/TodolistPage";
 
 function App() {
+  //__________header operation__________
   const [headerState, setHeaderState] = useState(0);
-  //0: Opening page
-  //1: Signup page
+  /*Options:
+  0: Opening page 
+  1: Signup page*/
 
   return (
     <Router>
@@ -26,7 +28,7 @@ function App() {
         />
         <Route
           path="/todolist"
-          element={<Todolist setHeaderState={setHeaderState} />}
+          element={<TodolistPage setHeaderState={setHeaderState} />}
         />
       </Routes>
       <Footer />

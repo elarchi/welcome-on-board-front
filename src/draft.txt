@@ -1,18 +1,5 @@
-//style
-import "./todolistTaskModal.scss";
-
-const TodolistTaskModal = ({
-  taskModal,
-  closeTaskModal,
-  handleCreateTask,
-  taskTitle,
-  setTaskTitle,
-  taskDescription,
-  setTaskDescription,
-  setIsImportant,
-}) => {
-  return (
-    <div
+{
+  /* <div
       className={
         taskModal ? "task-modal-enable__div" : "task-modal-disable__div"
       }
@@ -78,8 +65,5 @@ const TodolistTaskModal = ({
           </button>
         </div>
       </form>
-    </div>
-  );
-};
-
-export default TodolistTaskModal;
+    </div> */
+}

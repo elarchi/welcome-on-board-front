@@ -1,12 +1,12 @@
 //__________package__________
 import { useState } from "react";
 //__________style__________
-import "./todolist.scss";
+import "./todolistPage.scss";
 //__________component__________
 import TodolistModal from "../../components/TodolistModal/TodolistModal";
 import FormattedDate from "../../components/FormattedDate/FormattedDate";
 
-const Todolist = ({ setHeaderState }) => {
+const TodolistPage = ({ setHeaderState }) => {
   setHeaderState(2);
 
   //__________item operation__________
@@ -14,9 +14,9 @@ const Todolist = ({ setHeaderState }) => {
   const [itemDescription, setItemDescription] = useState("");
   const [listTab, setListTab] = useState([]);
   const [taskTab, setTaskTab] = useState([]);
-  // const [isImportant, setIsImportant] = useState(false);
+  /*const [isImportant, setIsImportant] = useState(false);*/
   /*const [isDone, setIsDone] = useState(false);*/
-  /* const [tasksDone, setTasksDone] = useState(0); // combien de task à true ?*/
+  /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
   const totalTasks = taskTab.length;
 
   //__________modal operation__________
@@ -45,7 +45,7 @@ const Todolist = ({ setHeaderState }) => {
       const newTaskTab = [...taskTab];
       newTaskTab.push({
         title: itemTitle,
-        // isImportant: isImportant,
+        /*isImportant: isImportant,*/
         description: itemDescription,
         /* isDone: isDone,*/
       });
@@ -112,4 +112,4 @@ const Todolist = ({ setHeaderState }) => {
   );
 };
 
-export default Todolist;
+export default TodolistPage;
