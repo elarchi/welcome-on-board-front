@@ -19,6 +19,18 @@ const TodolistPage = ({ setHeaderState }) => {
   /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
   const totalTasks = taskTab.length;
 
+  const handleDeleteTask = (indexItem) => {
+    const newTaskTab = [...taskTab];
+    newTaskTab.splice(indexItem, 1);
+    setTaskTab(newTaskTab);
+  };
+
+  const handleDeleteList = (indexItem) => {
+    const newListTab = [...listTab];
+    newListTab.splice(indexItem, 1);
+    setListTab(newListTab);
+  };
+
   //__________modal operation__________
   const [whichItem, setWhichItem] = useState("");
   const [openModal, setOpenModal] = useState(false);
@@ -74,6 +86,15 @@ const TodolistPage = ({ setHeaderState }) => {
             <div className="listCard__div" key={index}>
               <div className="listHead__div">
                 <h2>{list.title}</h2>
+                <span>🖊</span>
+                <span
+                  onClick={() => {
+                    handleDeleteList(index);
+                  }}
+                >
+                  🗑
+                </span>
+                {/* <span onClick={() => {}}>✅</span> */}
                 <span>/{totalTasks}</span>
               </div>
               <div className="listBody__div">
@@ -83,7 +104,13 @@ const TodolistPage = ({ setHeaderState }) => {
                       <h3>{task.title}</h3>
                       <div className="cardOptions__div">
                         <span>🖊</span>
-                        <span>🗑</span>
+                        <span
+                          onClick={() => {
+                            handleDeleteTask(index);
+                          }}
+                        >
+                          🗑
+                        </span>
                         {/* <span onClick={() => {}}>✅</span> */}
                       </div>
                     </div>
