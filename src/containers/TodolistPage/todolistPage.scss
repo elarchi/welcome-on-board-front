@@ -47,14 +47,51 @@ $corail: #fa633a;
   }
 
   .list-section__div {
-    border: red solid 3px;
+    margin-top: 5rem;
     width: 100%;
-  }
+    display: flex;
+    gap: 30px;
+    .listCard__div {
+      display: flex;
+      flex-direction: column;
+      width: 295px;
+      gap: 30px;
 
-  .task-modal-enable__div {
-  }
+      .listHead__div {
+        border-bottom: solid $dark-sailor 1px;
+        display: flex;
+        justify-content: space-between;
 
-  .task-modal-disable__div {
-    display: none;
+        h2 {
+          font-size: 24px;
+        }
+
+        .updateItem__div {
+          display: flex;
+          gap: 15px;
+        }
+      }
+
+      .listBody__div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .taskCard__div {
+          border: solid 1px $dark-sailor;
+          display: flex;
+          justify-content: space-between;
+          width: 295px;
+          height: 70px;
+          align-items: center;
+          font-size: 20px;
+          background-color: $foam;
+
+          .cardOptions__div {
+            display: flex;
+            gap: 15px;
+          }
+        }
+      }
+    }
   }
 }

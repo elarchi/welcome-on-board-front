@@ -80,21 +80,24 @@ const TodolistPage = ({ setHeaderState }) => {
         <FormattedDate />
         <button onClick={handleClickAddList}>ADD LIST</button>
       </div>
-      <div className="list-section__div">
+      <div className="list-section__div container__div">
         {listTab.map((list, index) => {
           return (
             <div className="listCard__div" key={index}>
               <div className="listHead__div">
-                <h2>{list.title}</h2>
-                <span>🖊</span>
-                <span
-                  onClick={() => {
-                    handleDeleteList(index);
-                  }}
-                >
-                  🗑
-                </span>
-                {/* <span onClick={() => {}}>✅</span> */}
+                <h2>{list.title.toUpperCase()}</h2>
+                <div className="updateItem__div">
+                  <span>🖊</span>
+                  <span
+                    onClick={() => {
+                      handleDeleteList(index);
+                    }}
+                  >
+                    🗑
+                  </span>
+                  {/* <span onClick={() => {}}>✅</span> */}
+                </div>
+
                 <span>/{totalTasks}</span>
               </div>
               <div className="listBody__div">
