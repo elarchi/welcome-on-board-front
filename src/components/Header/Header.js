@@ -14,7 +14,7 @@ const Header = ({ headerState }) => {
         <div className="header__div">
           <div className="container__div items__div">
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <h1>⚓️ Welcome on Board</h1>
+              <h1>🦜 Welcome on Board</h1>
             </Link>
 
             <div className="nav__div">
