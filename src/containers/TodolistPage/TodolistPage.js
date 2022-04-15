@@ -12,6 +12,7 @@ const TodolistPage = ({ setHeaderState }) => {
   //ITEM OPERATION
   const [itemTitle, setItemTitle] = useState("");
   const [itemDescription, setItemDescription] = useState("");
+  const [isImportantTask, setIsImportantTask] = useState(false);
   const [listTab, setListTab] = useState([
     { title: "Brasil trip", isDone: false },
   ]);
@@ -32,12 +33,22 @@ const TodolistPage = ({ setHeaderState }) => {
       setListTab(newListTab);
     } else if (whichItem === "task") {
       const newTaskTab = [...taskTab];
-      newTaskTab.push({
-        title: itemTitle,
-        /*isImportant: false,*/
-        description: itemDescription,
-        isDone: false,
-      });
+      if (isImportantTask) {
+        newTaskTab.push({
+          title: itemTitle,
+          description: itemDescription,
+          isDone: false,
+          isImportant: true,
+        });
+      } else {
+        newTaskTab.push({
+          title: itemTitle,
+          description: itemDescription,
+          isDone: false,
+          isImportant: false,
+        });
+      }
+
       setTaskTab(newTaskTab);
     }
     setItemTitle("");
@@ -191,7 +202,8 @@ const TodolistPage = ({ setHeaderState }) => {
         setItemTitle={setItemTitle}
         itemDescription={setItemDescription}
         setItemDescription={setItemDescription}
-        // setIsImportant={setIsImportant}
+        isImportantTask={isImportantTask}
+        setIsImportantTask={setIsImportantTask}
       />
     </div>
   );
