@@ -79,9 +79,15 @@ const TodolistModal = ({
           <button type="button" onClick={closeModal}>
             CANCEL
           </button>
-          <button type="submit" disabled={!itemTitle}>
-            CREATE LIST
-          </button>
+          {whichItem === "task" ? (
+            <button type="submit" disabled={!itemTitle}>
+              CREATE TASK
+            </button>
+          ) : (
+            <button type="submit" disabled={!itemTitle}>
+              CREATE LIST
+            </button>
+          )}
         </div>
       </form>
     </div>

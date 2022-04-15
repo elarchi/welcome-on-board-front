@@ -76,6 +76,15 @@ $corail: #fa633a;
         display: flex;
         flex-direction: column;
         gap: 15px;
+        .importantTaskCard__div {
+          background-color: $corail;
+          color: $foam;
+        }
+
+        .notImportantTaskCard__div {
+          background-color: $foam;
+          color: $dark-sailor;
+        }
         .taskCard__div {
           border: solid 1px $dark-sailor;
           display: flex;
@@ -84,8 +93,8 @@ $corail: #fa633a;
           height: 50px;
           align-items: center;
           font-size: 20px;
-          background-color: $foam;
           padding: 10px;
+
           &:hover {
             border: solid $dark-sailor 2px;
             cursor: pointer;
@@ -93,6 +102,7 @@ $corail: #fa633a;
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
               0 17px 50px 0 rgba(0, 0, 0, 0.19);
           }
+
           .taskDone__h3 {
             text-decoration: line-through;
           }

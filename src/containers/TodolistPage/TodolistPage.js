@@ -12,13 +12,16 @@ const TodolistPage = ({ setHeaderState }) => {
   //__________item operation__________
   const [itemTitle, setItemTitle] = useState("");
   const [itemDescription, setItemDescription] = useState("");
-  const [listTab, setListTab] = useState([{ title: "Brasil trip" }]);
-  const [taskTab, setTaskTab] = useState([
-    { title: "Check passport's validity", isDone: false },
-    { title: "Learn brasil history", isDone: false },
-    { title: "Learn portuguese", isDone: false },
+  const [listTab, setListTab] = useState([
+    { title: "Brasil trip", isDone: false },
   ]);
-  /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
+  const [taskTab, setTaskTab] = useState([
+    { title: "Check passport's validity", isDone: false, isImportant: true },
+    { title: "Learn brasil history", isDone: false, isImportant: false },
+    { title: "Learn portuguese", isDone: false, isImportant: false },
+  ]);
+  const [tasksDoneTab, setTasksDoneTab] = useState([]);
+  const howManyDone = tasksDoneTab.length;
   const totalTasks = taskTab.length;
 
   const handleCreateItem = (event) => {
@@ -43,22 +46,19 @@ const TodolistPage = ({ setHeaderState }) => {
   };
 
   const handleTaskDone = (task, index) => {
-    console.log("1");
-    console.log("task===>", task);
     const newTaskTab = [...taskTab];
+    const newTasksDoneTab = [...tasksDoneTab];
     newTaskTab.map(() => {
-      console.log("2");
       if (task.isDone === false) {
-        console.log("3");
-        return (newTaskTab[index].isDone = true);
+        newTaskTab[index].isDone = true;
+        newTasksDoneTab.push(task);
       } else {
-        console.log("4");
-        return (newTaskTab[index].isDone = false);
+        newTasksDoneTab.splice(index, 1);
+        newTaskTab[index].isDone = false;
       }
     });
-
     setTaskTab(newTaskTab);
-    console.log("5");
+    setTasksDoneTab(newTasksDoneTab);
   };
 
   const handleDeleteTask = (indexItem) => {
@@ -116,15 +116,23 @@ const TodolistPage = ({ setHeaderState }) => {
                   >
                     🗑
                   </span>
-                  {/* <span onClick={() => {}}>✅</span> */}
                 </div>
 
-                <span>/{totalTasks}</span>
+                <span>
+                  {howManyDone}/{totalTasks}
+                </span>
               </div>
               <div className="listBody__div">
                 {taskTab.map((task, index) => {
                   return (
-                    <div className="taskCard__div" key={index}>
+                    <div
+                      className={
+                        task.isImportant
+                          ? "taskCard__div importantTaskCard__div"
+                          : "taskCard__div notImportantTaskCard__div"
+                      }
+                      key={index}
+                    >
                       <h3
                         className={
                           task.isDone ? "taskDone__h3" : "taskNotDone__h3"
