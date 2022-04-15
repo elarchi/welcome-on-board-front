@@ -125,7 +125,13 @@ const TodolistPage = ({ setHeaderState }) => {
                 {taskTab.map((task, index) => {
                   return (
                     <div className="taskCard__div" key={index}>
-                      <h3>{task.title}</h3>
+                      <h3
+                        className={
+                          task.isDone ? "taskDone__h3" : "taskNotDone__h3"
+                        }
+                      >
+                        {task.title}
+                      </h3>
                       <div className="cardOptions__div">
                         <span>🖊</span>
                         <span

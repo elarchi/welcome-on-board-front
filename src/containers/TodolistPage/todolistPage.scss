@@ -93,7 +93,9 @@ $corail: #fa633a;
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
               0 17px 50px 0 rgba(0, 0, 0, 0.19);
           }
-
+          .taskDone__h3 {
+            text-decoration: line-through;
+          }
           .cardOptions__div {
             display: flex;
             gap: 15px;
