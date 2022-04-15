@@ -1,17 +1,18 @@
-//packages
+//PACKAGE
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//style
+//STYLE
 import "./App.scss";
-//components
+//COMPONENT
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import OpeningPage from "./containers/OpeningPage/OpeningPage";
 import SignupPage from "./containers/SignupPage/SignupPage";
 import TodolistPage from "./containers/TodolistPage/TodolistPage";
+import Page404 from "./containers/Page404/Page404";
 
 function App() {
-  //__________header operation__________
+  //HEADER OPERATIONS
   const [headerState, setHeaderState] = useState(0);
   /*Options:
   0: Opening page 
@@ -33,6 +34,7 @@ function App() {
           path="/todolist"
           element={<TodolistPage setHeaderState={setHeaderState} />}
         />
+        <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
     </Router>

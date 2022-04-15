@@ -1,15 +1,15 @@
-//__________package__________
+//PACKAGE
 import { useState } from "react";
-//__________style__________
+//STYLE
 import "./todolistPage.scss";
-//__________component__________
+//COMPONENT
 import TodolistModal from "../../components/TodolistModal/TodolistModal";
 import FormattedDate from "../../components/FormattedDate/FormattedDate";
 
 const TodolistPage = ({ setHeaderState }) => {
   setHeaderState(2);
 
-  //__________item operation__________
+  //ITEM OPERATION
   const [itemTitle, setItemTitle] = useState("");
   const [itemDescription, setItemDescription] = useState("");
   const [listTab, setListTab] = useState([
@@ -46,18 +46,30 @@ const TodolistPage = ({ setHeaderState }) => {
   };
 
   const handleTaskDone = (task, index) => {
+    console.log("1");
     const newTaskTab = [...taskTab];
     const newTasksDoneTab = [...tasksDoneTab];
+    console.log("newTasksDoneTab===>", newTasksDoneTab);
     newTaskTab.map(() => {
+      // console.log("2");
       if (task.isDone === false) {
-        newTaskTab[index].isDone = true;
-        newTasksDoneTab.push(task);
+        // console.log("3");
+        return (newTaskTab[index].isDone = true);
       } else {
-        newTasksDoneTab.splice(index, 1);
-        newTaskTab[index].isDone = false;
+        // console.log("4");
+        return (newTaskTab[index].isDone = false);
       }
     });
+    console.log("5");
     setTaskTab(newTaskTab);
+    console.log("task.isDone===>", task.isDone);
+    if (task.isDone === false) {
+      const indexTaskDone = newTasksDoneTab.indexOf(task);
+      newTasksDoneTab.splice(indexTaskDone, 1);
+    } else {
+      newTasksDoneTab.push(task);
+    }
+    console.log("newTasksDoneTab===>", newTasksDoneTab);
     setTasksDoneTab(newTasksDoneTab);
   };
 
@@ -73,7 +85,7 @@ const TodolistPage = ({ setHeaderState }) => {
     setListTab(newListTab);
   };
 
-  //__________modal operation__________
+  //MODAL OPERATION
   const [whichItem, setWhichItem] = useState("");
   const [openModal, setOpenModal] = useState(false);
 

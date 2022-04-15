@@ -1,12 +1,13 @@
-//packages
+//PACKAGE
 import { Link } from "react-router-dom";
-//style
+//STYLE
 import "./header.scss";
 
 const Header = ({ headerState }) => {
-  //0: Opening page
-  //1: Signup page
-  //2: To-do list page as a guest
+  /*HEADER OPTIONS:
+  0: Opening page
+  1: Signup page
+  2: To-do list page as a guest*/
 
   return (
     <>

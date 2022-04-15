@@ -1,4 +1,4 @@
-//style
+//STYLE
 import "./todolistModal.scss";
 
 const TodolistModal = ({
