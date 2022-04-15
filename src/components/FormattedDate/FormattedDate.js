@@ -1,4 +1,4 @@
-//style
+//STYLE
 import "./formattedDate.scss";
 
 const FormattedDate = () => {

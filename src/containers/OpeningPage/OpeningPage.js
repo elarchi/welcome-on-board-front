@@ -1,6 +1,6 @@
-//packages
+//PACKAGE
 import { Link } from "react-router-dom";
-//style
+//STYLE
 import "./openingPage.scss";
 
 const OpeningPage = ({ setHeaderState }) => {

@@ -1,7 +1,7 @@
-//packages
+//PACKAGE
 import { useState } from "react";
 /*import axios from "axios";*/
-//style
+//STYLE
 import "./signupPage.scss";
 
 const Signup = ({ setHeaderState }) => {

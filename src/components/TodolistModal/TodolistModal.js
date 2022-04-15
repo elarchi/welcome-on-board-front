@@ -1,4 +1,4 @@
-//style
+//STYLE
 import "./todolistModal.scss";
 
 const TodolistModal = ({
@@ -10,7 +10,8 @@ const TodolistModal = ({
   setItemTitle,
   itemDescription,
   setItemDescription,
-  setIsImportant,
+  isImportantTask,
+  setIsImportantTask,
 }) => {
   return (
     <div className={openModal ? "modal-enable__div" : "modal-disable__div"}>
@@ -43,24 +44,17 @@ const TodolistModal = ({
             <h2>Important?</h2>
             <div className="buttons__div">
               <input
-                type="radio"
+                type="checkbox"
                 name="importance"
-                id="YES"
                 onClick={() => {
-                  setIsImportant(true);
+                  if (isImportantTask) {
+                    setIsImportantTask(false);
+                  } else {
+                    setIsImportantTask(true);
+                  }
                 }}
               />
               <label for="YES">YES</label>
-              <input
-                type="radio"
-                name="importance"
-                id="NO"
-                onClick={() => {
-                  setIsImportant(false);
-                }}
-                checked="defaultChecked"
-              />
-              <label for="NO">NO</label>
             </div>
           </div>
         ) : null}
@@ -79,9 +73,15 @@ const TodolistModal = ({
           <button type="button" onClick={closeModal}>
             CANCEL
           </button>
-          <button type="submit" disabled={!itemTitle}>
-            CREATE LIST
-          </button>
+          {whichItem === "task" ? (
+            <button type="submit" disabled={!itemTitle}>
+              CREATE TASK
+            </button>
+          ) : (
+            <button type="submit" disabled={!itemTitle}>
+              CREATE LIST
+            </button>
+          )}
         </div>
       </form>
     </div>

@@ -1,24 +1,28 @@
-//__________package__________
+//PACKAGE
 import { useState } from "react";
-//__________style__________
+//STYLE
 import "./todolistPage.scss";
-//__________component__________
+//COMPONENT
 import TodolistModal from "../../components/TodolistModal/TodolistModal";
 import FormattedDate from "../../components/FormattedDate/FormattedDate";
 
 const TodolistPage = ({ setHeaderState }) => {
   setHeaderState(2);
 
-  //__________item operation__________
+  //ITEM OPERATION
   const [itemTitle, setItemTitle] = useState("");
   const [itemDescription, setItemDescription] = useState("");
-  const [listTab, setListTab] = useState([{ title: "Brasil trip" }]);
-  const [taskTab, setTaskTab] = useState([
-    { title: "Check passport's validity", isDone: false },
-    { title: "Learn brasil history", isDone: false },
-    { title: "Learn portuguese", isDone: false },
+  const [isImportantTask, setIsImportantTask] = useState(false);
+  const [listTab, setListTab] = useState([
+    { title: "Brasil trip", isDone: false },
   ]);
-  /* const [tasksDoneTab, setTasksDoneTab] = useState(0); // combien de task à true ?*/
+  const [taskTab, setTaskTab] = useState([
+    { title: "Check passport's validity", isDone: false, isImportant: true },
+    { title: "Learn brasil history", isDone: false, isImportant: false },
+    { title: "Learn portuguese", isDone: false, isImportant: false },
+  ]);
+  const [tasksDoneTab, setTasksDoneTab] = useState([]);
+  const howManyDone = tasksDoneTab.length;
   const totalTasks = taskTab.length;
 
   const handleCreateItem = (event) => {
@@ -29,12 +33,22 @@ const TodolistPage = ({ setHeaderState }) => {
       setListTab(newListTab);
     } else if (whichItem === "task") {
       const newTaskTab = [...taskTab];
-      newTaskTab.push({
-        title: itemTitle,
-        /*isImportant: false,*/
-        description: itemDescription,
-        isDone: false,
-      });
+      if (isImportantTask) {
+        newTaskTab.push({
+          title: itemTitle,
+          description: itemDescription,
+          isDone: false,
+          isImportant: true,
+        });
+      } else {
+        newTaskTab.push({
+          title: itemTitle,
+          description: itemDescription,
+          isDone: false,
+          isImportant: false,
+        });
+      }
+
       setTaskTab(newTaskTab);
     }
     setItemTitle("");
@@ -44,21 +58,30 @@ const TodolistPage = ({ setHeaderState }) => {
 
   const handleTaskDone = (task, index) => {
     console.log("1");
-    console.log("task===>", task);
     const newTaskTab = [...taskTab];
+    const newTasksDoneTab = [...tasksDoneTab];
+    console.log("newTasksDoneTab===>", newTasksDoneTab);
     newTaskTab.map(() => {
-      console.log("2");
+      // console.log("2");
       if (task.isDone === false) {
-        console.log("3");
+        // console.log("3");
         return (newTaskTab[index].isDone = true);
       } else {
-        console.log("4");
+        // console.log("4");
         return (newTaskTab[index].isDone = false);
       }
     });
-
-    setTaskTab(newTaskTab);
     console.log("5");
+    setTaskTab(newTaskTab);
+    console.log("task.isDone===>", task.isDone);
+    if (task.isDone === false) {
+      const indexTaskDone = newTasksDoneTab.indexOf(task);
+      newTasksDoneTab.splice(indexTaskDone, 1);
+    } else {
+      newTasksDoneTab.push(task);
+    }
+    console.log("newTasksDoneTab===>", newTasksDoneTab);
+    setTasksDoneTab(newTasksDoneTab);
   };
 
   const handleDeleteTask = (indexItem) => {
@@ -73,7 +96,7 @@ const TodolistPage = ({ setHeaderState }) => {
     setListTab(newListTab);
   };
 
-  //__________modal operation__________
+  //MODAL OPERATION
   const [whichItem, setWhichItem] = useState("");
   const [openModal, setOpenModal] = useState(false);
 
@@ -116,16 +139,30 @@ const TodolistPage = ({ setHeaderState }) => {
                   >
                     🗑
                   </span>
-                  {/* <span onClick={() => {}}>✅</span> */}
                 </div>
 
-                <span>/{totalTasks}</span>
+                <span>
+                  {howManyDone}/{totalTasks}
+                </span>
               </div>
               <div className="listBody__div">
                 {taskTab.map((task, index) => {
                   return (
-                    <div className="taskCard__div" key={index}>
-                      <h3>{task.title}</h3>
+                    <div
+                      className={
+                        task.isImportant
+                          ? "taskCard__div importantTaskCard__div"
+                          : "taskCard__div notImportantTaskCard__div"
+                      }
+                      key={index}
+                    >
+                      <h3
+                        className={
+                          task.isDone ? "taskDone__h3" : "taskNotDone__h3"
+                        }
+                      >
+                        {task.title}
+                      </h3>
                       <div className="cardOptions__div">
                         <span>🖊</span>
                         <span
@@ -165,7 +202,8 @@ const TodolistPage = ({ setHeaderState }) => {
         setItemTitle={setItemTitle}
         itemDescription={setItemDescription}
         setItemDescription={setItemDescription}
-        // setIsImportant={setIsImportant}
+        isImportantTask={isImportantTask}
+        setIsImportantTask={setIsImportantTask}
       />
     </div>
   );
