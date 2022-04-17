@@ -8,7 +8,7 @@ This app serves as a planner and organiser to plan your trips.
 
 
 
-## Summary
+## Table of Contents
  ### 🧐 What this app does
  ### 👩🏾‍💻 Tech 
  ### 🎨 Design 
